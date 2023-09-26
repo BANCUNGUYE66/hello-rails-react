@@ -17,9 +17,9 @@ module.exports = {
     ],
   },
   output: {
-    filename: '[name].js',
-    sourceMapFilename: '[name].js.map',
-    path: path.resolve(__dirname, 'app/assets/builds'),
+    filename: '[name]-bundle.js',
+    sourceMapFilename: '[name]-bundle.js.map',
+    path: path.resolve(__dirname, 'public/packs'), // Update output path
   },
   plugins: [
     new webpack.optimize.LimitChunkCountPlugin({

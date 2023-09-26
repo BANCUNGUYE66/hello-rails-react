@@ -1,0 +1,38 @@
+{
+    "extends": ["stylelint-config-standard"],
+    "plugins": ["stylelint-scss", "stylelint-csstree-validator"],
+    "rules": {
+        "at-rule-no-unknown": [
+            true,
+            {
+                "ignoreAtRules": [
+                    "tailwind",
+                    "apply",
+                    "variants",
+                    "responsive",
+                    "screen"
+                ]
+            }
+        ],
+        "scss/at-rule-no-unknown": [
+            true,
+            {
+                "ignoreAtRules": [
+                    "tailwind",
+                    "apply",
+                    "variants",
+                    "responsive",
+                    "screen"
+                ]
+            }
+        ],
+        "csstree/validator": true
+    },
+    "ignoreFiles": [
+        "build/**",
+        "dist/**",
+        "**/reset*.css",
+        "**/bootstrap*.css",
+        "public/assets/trix-ac629f94e04ee467ab73298a3496a4dfa33ca26a132f624dd5475381bc27bdc8.css"
+    ]
+}

@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  get 'root/index'
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  namespace :api do
+    get 'random_greeting', to: 'greetings#random_greeting'
+  end
 
-  # Defines the root path route ("/")
-  # root "articles#index"
-  root 'root#index'
+  root to: 'root#index'
+  get '/packs/*filename', to: 'packs#show', constraints: { filename: /.+/ }
 end
